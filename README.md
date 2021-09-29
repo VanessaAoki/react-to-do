@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+<p align="center">
+  <a href="https://www.microverse.org/">
+    <img alt="Microverse" src="https://img.shields.io/badge/-Microverse-blueviolet?style=flat-square">
+  </a>
+  <a href="https://github.com/VanessaAoki/react-to-do/blob/main/LICENSE">
+    <img alt="MIT Licensed" src="https://img.shields.io/github/license/VanessaAoki/react-to-do?style=flat-square">
+  </a>
+  <a href="https://github.com/VanessaAoki/react-to-do">
+    <img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/VanessaAoki/react-to-do/main?color=blue&style=flat-square">
+  </a>
+  <a href="https://github.com/VanessaAoki/react-to-do">
+    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/VanessaAoki/react-to-do?color=pink&label=%E2%98%85%20stars%20&style=flat-square">
+  </a>
+  <a href="https://github.com/VanessaAoki">
+    <img alt="GitHub followers" src="https://img.shields.io/github/followers/VanessaAoki?color=yellow&logo=github&style=flat-square">
+  </a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React-to-do
+This is a to do app made with react, following the [React Tutorial From Scratch: A Step-by-Step Guide (2021)](https://ibaslogic.com/react-tutorial-for-beginners/).
 
-## Available Scripts
+## Built With
 
-In the project directory, you can run:
+- HTML, CSS, JavaScript & React;
+- Visual Studio, Git & GitHub;
 
-### `yarn start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Running locally
+To run this project, you only need a computer with a browser (like Google Chrome, Mozilla Firefox, Microsoft Edge, Apple Safari, etc.) installed, and follow these steps:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. In your terminal, type the following, to clone this repository:
 
-### `yarn test`
+```sh
+$ git clone https://github.com/VanessaAoki/react-to-do.git
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. After, run the following commands in your terminal:
 
-### `yarn build`
+```sh
+$ cd react-to-do
+$ npm install
+$ npm run build
+$ cd dist
+```
+<details align="right">
+<summary><small>What are these commands?</summary>
+- the `$ cd` command is used to move to different folders.<br>
+- while `$ npm run build` is used to compile the aplication files.</small>
+</details>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. If your default browser does not start automatically, open it and type `http://localhost:3000` to run the application.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Author
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+👩🏼‍💻 **Vanessa Aoki**
 
-### `yarn eject`
+- GitHub: [@VanessaAoki](https://github.com/VanessaAoki)
+- Twitter: [@VanessaSAoki](https://twitter.com/VanessaSAoki)
+- Linkedin: [Vanessa Aoki](https://www.linkedin.com/in/vanessasaoki/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🤝 Contributing
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Contributions, issues, and feature requests are welcome!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Feel free to check the [issues page](https://github.com/VanessaAoki/react-to-do/issues).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Show your support
 
-## Learn More
+Give a ⭐️ if you like this project!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📝 License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](./LICENSE) licensed.

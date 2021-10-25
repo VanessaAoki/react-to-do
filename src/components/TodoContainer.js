@@ -1,4 +1,5 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import TodosList from './TodosList';
 import Header from './Header';
 import InputTodo from './InputTodo';
@@ -7,22 +8,22 @@ class TodoContainer extends React.Component {
   state = {
     todos: [
       {
-        id: 1,
+        id: uuidv4(),
         title: "Atividade 1",
         completed: true
       },
       {
-        id: 2,
+        id: uuidv4(),
         title: "Atividade 2",
         completed: true
       },
       {
-        id: 3,
+        id: uuidv4(),
         title: "Atividade 3",
         completed: true
       },
       {
-        id: 4,
+        id: uuidv4(),
         title: "Atividade 4",
         completed: true
       },
@@ -55,7 +56,7 @@ class TodoContainer extends React.Component {
 
   addTodoItem = (title) => {
     const newTodo = {
-      id: 5,
+      id: uuidv4(),
       title: title,
       completed: false
     };

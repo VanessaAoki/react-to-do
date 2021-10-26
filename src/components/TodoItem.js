@@ -1,26 +1,63 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/no-access-state-in-setstate */
-/* eslint-disable react/button-has-type */
-/* eslint-disable react/prefer-stateless-function */
 import React from 'react';
+import styles from './TodoItem.module.css'
 
 class TodoItem extends React.Component {
+  state = {
+    editing: false,
+  }
+ 
+  completedStyle = {
+    fontStyle: "italic",
+    color: "#595959",
+    opacity: 0.4,
+    textDecoration: "line-through",
+  };
+
+  handleEditing = () => {
+    this.setState({
+      editing: true,
+    })
+  }
+
   render() {
+    const { id, completed, title } = this.props.todo;
+
+    let viewMode = {}
+    let editMode = {}
+
+    if (this.state.editing) {
+      viewMode.display = "none"
+    } else {
+      editMode.display = "none"
+    };
+
     return (
-      <li>
+      <li className={styles.item}>
+        <div onDoubleClick={this.handleEditing} style={viewMode}>
+          <input
+            type="checkbox"
+            className={styles.checkbox}
+            checked={completed}
+            onChange={() => this.props.handleChangeProps(id)}
+          />
+          <button onClick={() => this.props.deleteTodoProps(id)}>
+            Delete
+          </button>
+          <span style={completed ? this.completedStyle : null}>
+            {title}
+          </span>
+        </div>
         <input
-          type="checkbox"
-          checked={this.props.todo.completed}
-          onChange={() => this.props.handleChangeProps(this.props.todo.id)}
+          type="text"
+          style={editMode}
+          className={styles.textInput}
+          value={title}
+          onChange={e => {
+            this.props.setUpdate(e.target.value, id)
+          }}
         />
-        {' '}
-        {this.props.todo.title}
-        <button onClick={() => this.props.deleteTodoProps(this.props.todo.id)}>
-          Delete
-        </button>
       </li>
-    );
+    )
   }
 }
 

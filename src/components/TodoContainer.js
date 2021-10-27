@@ -6,28 +6,24 @@ import InputTodo from './InputTodo';
 
 class TodoContainer extends React.Component {
   state = {
-    todos: [
-      {
-        id: uuidv4(),
-        title: "Atividade 1",
-        completed: true
-      },
-      {
-        id: uuidv4(),
-        title: "Atividade 2",
-        completed: true
-      },
-      {
-        id: uuidv4(),
-        title: "Atividade 3",
-        completed: true
-      },
-      {
-        id: uuidv4(),
-        title: "Atividade 4",
-        completed: true
-      },
-    ]
+    todos: [],
+  };
+
+  componentDidMount() {
+    const temp = localStorage.getItem("todos")
+    const loadedTodos = JSON.parse(temp)
+    if (loadedTodos) {
+      this.setState({
+        todos: loadedTodos
+      })
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.todos !== this.state.todos) {
+      const temp = JSON.stringify(this.state.todos)
+      localStorage.setItem("todos", temp)
+    }
   };
 
   handleChange = (id) => {

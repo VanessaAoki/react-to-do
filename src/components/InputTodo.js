@@ -1,29 +1,24 @@
-import React, { Component } from 'react';
+import React, { Component } from "react"
 
 class InputTodo extends Component {
   state = {
     title: "",
-  };
-
+  }
   onChange = e => {
     this.setState({
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value,    
     })
-  };
+  }
 
   handleSubmit = e => {
     e.preventDefault();
-    if (this.state.title.trim()) {
-      this.props.addTodoProps(this.state.title);
-      this.setState({
-        title: "",
-      });
-    } else {
-      alert("Task must not be empty")
-    };
+    this.props.addTodoProps(this.state.title);
+    this.setState({    
+      title: ""  
+    });
   };
 
-  render () {
+  render() {
     return (
       <form onSubmit={this.handleSubmit} className="form-container">
         <input
@@ -31,13 +26,12 @@ class InputTodo extends Component {
           className="input-text"
           placeholder="Add todo..."
           value={this.state.title}
-          name="title"
+          name="title"          
           onChange={this.onChange}
         />
-        <button className="input-submit">Submit</button>
+        <input type="submit" className="input-submit" value="Submit" />
       </form>
     )
   }
 }
-
-export default InputTodo;
+export default InputTodo
